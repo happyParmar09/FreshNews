@@ -11,6 +11,10 @@
 		8B41C75028AECC7F00329D60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B41C74F28AECC7F00329D60 /* ContentView.swift */; };
 		8B41C75228AECC8200329D60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B41C75128AECC8200329D60 /* Assets.xcassets */; };
 		8B41C75528AECC8200329D60 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B41C75428AECC8200329D60 /* Preview Assets.xcassets */; };
+		8B41C75D28AECE6300329D60 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B41C75C28AECE6300329D60 /* NetworkManager.swift */; };
+		8B41C76028AECF4700329D60 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B41C75F28AECF4700329D60 /* PostData.swift */; };
+		8B41C76328AED41700329D60 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B41C76228AED41700329D60 /* DetailView.swift */; };
+		8B41C76528AED70300329D60 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B41C76428AED70300329D60 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,11 @@
 		8B41C74F28AECC7F00329D60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8B41C75128AECC8200329D60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B41C75428AECC8200329D60 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8B41C75C28AECE6300329D60 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		8B41C75F28AECF4700329D60 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		8B41C76228AED41700329D60 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		8B41C76428AED70300329D60 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		8B41C76628AED89700329D60 /* FreshNews.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FreshNews.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +60,10 @@
 		8B41C74C28AECC7F00329D60 /* FreshNews */ = {
 			isa = PBXGroup;
 			children = (
+				8B41C76628AED89700329D60 /* FreshNews.entitlements */,
+				8B41C75B28AECE4C00329D60 /* Models */,
 				8B41C74D28AECC7F00329D60 /* FreshNewsApp.swift */,
-				8B41C74F28AECC7F00329D60 /* ContentView.swift */,
+				8B41C76128AED3F800329D60 /* Views */,
 				8B41C75128AECC8200329D60 /* Assets.xcassets */,
 				8B41C75328AECC8200329D60 /* Preview Content */,
 			);
@@ -65,6 +76,25 @@
 				8B41C75428AECC8200329D60 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8B41C75B28AECE4C00329D60 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8B41C75C28AECE6300329D60 /* NetworkManager.swift */,
+				8B41C75F28AECF4700329D60 /* PostData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8B41C76128AED3F800329D60 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8B41C74F28AECC7F00329D60 /* ContentView.swift */,
+				8B41C76228AED41700329D60 /* DetailView.swift */,
+				8B41C76428AED70300329D60 /* WebView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +167,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B41C75D28AECE6300329D60 /* NetworkManager.swift in Sources */,
 				8B41C75028AECC7F00329D60 /* ContentView.swift in Sources */,
+				8B41C76028AECF4700329D60 /* PostData.swift in Sources */,
+				8B41C76528AED70300329D60 /* WebView.swift in Sources */,
+				8B41C76328AED41700329D60 /* DetailView.swift in Sources */,
 				8B41C74E28AECC7F00329D60 /* FreshNewsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,9 +298,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FreshNews/FreshNews.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FreshNews/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -281,6 +317,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = gokulparmar.FreshNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -292,9 +329,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FreshNews/FreshNews.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FreshNews/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -309,6 +348,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = gokulparmar.FreshNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
